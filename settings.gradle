@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+include ':app'
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 's3://android-aars-storage.s3.amazonaws.com'
+//            authentication {
+//                awsIm(AwsImAuthentication) // load from EC2 role or env var
+//            }
+            credentials(AwsCredentials) {
+                accessKey 'AKIAVA6HTJUEJB4HLAJJ'
+                secretKey '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'
+            }
+        }
+    }
+}
+
+include ':hcblibrary'
