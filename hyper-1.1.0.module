@@ -44,6 +44,20 @@
       },
       "dependencies": [
         {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.6.1"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
           "group": "com.hypercloud",
           "module": "hyper",
           "version": {
